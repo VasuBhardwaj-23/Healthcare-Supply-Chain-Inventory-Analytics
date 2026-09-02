@@ -11,6 +11,7 @@
 ![SQL Server](https://img.shields.io/badge/SQL_Server-Analytics-CC2927?style=for-the-badge&logo=microsoftsqlserver&logoColor=white)
 ![Power BI](https://img.shields.io/badge/Power_BI-Dashboard-F2C811?style=for-the-badge&logo=powerbi&logoColor=black)
 ![DAX](https://img.shields.io/badge/DAX-KPIs-6A1B9A?style=for-the-badge)
+![Data Analytics](https://img.shields.io/badge/Data_Analytics-Business_Insights-0F9D58?style=for-the-badge)
 
 </div>
 
