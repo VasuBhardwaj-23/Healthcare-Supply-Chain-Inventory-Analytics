@@ -124,3 +124,166 @@ Interactive Power BI Dashboard
             │
             ▼
 Business Insights & Recommendations
+
+
+---
+
+# 📈 Key Performance Indicators
+
+The following KPIs summarize the major operational areas covered by the final Power BI reporting layer.
+
+| KPI | Value |
+|------|------:|
+| Total Sales | $3.33M |
+| Total Orders | 14.2K |
+| Total Ordered Quantity | 31.7K units |
+| Average Order Value | $234.04 |
+| Current Stock | 224.7K units |
+| Stock Cover | 49 days |
+| Stock Health | 97.4% |
+| Low-Stock Items | 27 |
+| Return Rate | 13.08% |
+| Total Suppliers | 538 |
+| Average Supplier Lead Time | 8.4 days |
+| On-Time Delivery Rate | 82.13% |
+| Average Reliability Score | 4.3 / 5 |
+
+
+---
+
+# 📸 Dashboard Preview
+
+## Executive Overview
+
+![Executive Overview](Screenshots/01_Executive_Overview.png)
+
+Executive dashboard providing a consolidated view of sales, orders, current inventory, return rate, sales and cost trends, order status, inventory health, and supplier performance.
+
+---
+
+## Demand Analytics
+
+![Demand Analytics](Screenshots/02_Demand_Analytics.png)
+
+Demand-focused dashboard analyzing demand volume, average order value, average unit value, monthly demand trends, category-level demand, medicine-level demand, and department performance.
+
+---
+
+## Inventory Analytics
+
+![Inventory Analytics](Screenshots/03_Inventory_Analytics.png)
+
+Inventory dashboard focused on current stock, stock coverage, low-stock exposure, stock health, reorder requirements, category-level inventory levels, and expiry risk.
+
+---
+
+## Suppliers Analytics
+
+![Suppliers Analytics](Screenshots/04_Suppliers_Analytics.png)
+
+Supplier performance dashboard analyzing supplier count, procurement cost, lead time, on-time delivery, reliability, regional performance, and supplier cost versus performance.
+
+---
+
+## Business Insights & Recommendations
+
+![Business Insights & Recommendations](Screenshots/05_Business_Insights_Recommendations.png)
+
+Business-focused dashboard translating the analytical findings into key observations, performance summaries, and practical recommendations for improving healthcare supply chain operations.
+
+---
+
+# 💡 Key Business Insights
+
+The dashboard enables analysis across the major operational areas of the healthcare supply chain.
+
+### 📦 Demand & Sales
+
+- Total sales reached approximately **$3.33M** across **14,218 order records**.
+- Total ordered quantity was approximately **31,731 units**.
+- Average order value was **$234.04**.
+- Demand can be analyzed across departments, categories, medicines, and monthly periods.
+- Order status analysis provides visibility into delivered, returned, cancelled, and pending orders.
+
+### 🏥 Inventory
+
+- Current inventory stands at approximately **224.7K units**.
+- Average stock coverage is approximately **49 days**.
+- The dashboard identifies **27 low-stock items** requiring monitoring.
+- Inventory analysis provides visibility into reorder requirements, stock coverage, category-level stock levels, and expiry risk.
+
+### 🚚 Supplier Performance
+
+- The supplier dataset contains **538 suppliers**.
+- Average supplier lead time is approximately **8.4 days**.
+- Overall on-time delivery performance is **82.13%**.
+- Average supplier reliability score is **4.3 / 5**.
+- Supplier performance can be compared across delivery performance, cost, lead time, reliability, and region.
+
+### 🏭 Facility Consumption
+
+Facility consumption analysis provides an operational perspective on:
+
+- Medicine consumption
+- Out-of-stock exposure
+- Wastage
+- Bed-day utilization
+- Supply usage
+- Regional consumption patterns
+
+This analysis was performed within the SQL Server analytical layer rather than being presented as a separate Power BI dashboard page.
+
+---
+
+# 📌 Strategic Recommendations
+
+Based on the analytical findings, potential business actions include:
+
+- **Optimize Inventory Planning** by monitoring low-stock items, reorder levels, and stock coverage to reduce stock-out exposure.
+- **Strengthen Supplier Performance Management** by evaluating delivery performance together with cost, lead time, and reliability.
+- **Monitor Demand Concentration** across departments, categories, and medicines to support better purchasing and inventory allocation.
+- **Reduce Operational Waste** by using facility consumption and wastage analysis to identify opportunities for improved resource utilization.
+- **Establish KPI-Based Monitoring** for demand, inventory availability, supplier delivery, and operational performance to support regular management review.
+
+---
+
+# 🧹 Data Preparation & Quality
+
+The datasets were reviewed and prepared before analytical use.
+
+Key data quality activities included:
+
+- Data profiling
+- Record and field validation
+- Duplicate checks
+- Missing-value assessment
+- Data-type validation
+- Date-field validation
+- Field standardization
+- Business-rule validation
+
+The prepared datasets form the foundation for the SQL Server analytical layer and Power BI reporting model.
+
+---
+
+# 📓 Python / Jupyter Analysis
+
+Python and Jupyter Notebooks were used for the initial data profiling and cleaning stage.
+
+The notebooks cover:
+
+- Dataset profiling
+- Data quality assessment
+- Missing-value analysis
+- Duplicate validation
+- Data cleaning
+- Field standardization
+- Initial validation
+
+```text
+Notebooks/
+├── 01_Data_Profiling.ipynb
+└── 02_Data_Cleaning.ipynb
+
+
+
