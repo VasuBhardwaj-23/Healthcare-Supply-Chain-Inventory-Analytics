@@ -132,7 +132,6 @@ Business Insights & Recommendations
 # 📈 Key Performance Indicators
 
 The following KPIs summarize the major operational areas covered by the final Power BI reporting layer.
-# 📈 Key Performance Indicators
 
 | KPI | Value |
 |------|------:|
@@ -288,3 +287,315 @@ The notebooks cover:
 Notebooks/
 ├── 01_Data_Profiling.ipynb
 └── 02_Data_Cleaning.ipynb
+
+
+# 🗄️ SQL Server Analysis
+
+SQL Server was used as the analytical layer for data validation, business analysis, and KPI development across the healthcare supply chain.
+
+The SQL analysis covers:
+
+- Data quality validation
+- Demand and sales analysis
+- Inventory analysis
+- Facility consumption analysis
+- Supplier procurement analysis
+
+```text
+SQL Scripts/
+├── 01_Data_Quality_Validation.sql
+├── 02_Demand_Sales_Analysis.sql
+├── 03_Inventory_Analysis.sql
+├── 04_Consumption_Facility_Analysis.sql
+└── 05_Supplier_Procurement_Analysis.sql
+```
+
+The SQL layer provided a structured environment for validating the cleaned datasets and translating operational data into business-oriented analysis.
+
+The Facility Consumption analysis was retained within the SQL Server analytical layer to examine medicine consumption, stock-out exposure, wastage, bed-day utilization, and regional operational patterns without adding another Power BI reporting page.
+
+---
+
+# 📊 Power BI Reporting
+
+Microsoft Power BI was used as the final reporting layer to convert the analytical outputs into an interactive management dashboard.
+
+The report contains five pages:
+
+1. Executive Overview
+2. Demand Analytics
+3. Inventory Analytics
+4. Suppliers Analytics
+5. Business Insights & Recommendations
+
+The reporting layer focuses on the major decision areas of the healthcare supply chain while keeping the dashboard concise and management-oriented.
+
+---
+
+# 📸 Dashboard Preview
+
+## Executive Overview
+
+![Executive Overview](Screenshots/01_Executive_Overview.png)
+
+Provides a consolidated view of sales, orders, current inventory, return rate, sales and cost trends, order status, inventory health, and supplier performance.
+
+---
+
+## Demand Analytics
+
+![Demand Analytics](Screenshots/02_Demand_Analytics.png)
+
+Analyzes demand volume, average order value, average unit value, monthly demand patterns, category-level demand, medicine-level demand, and department performance.
+
+---
+
+## Inventory Analytics
+
+![Inventory Analytics](Screenshots/03_Inventory_Analytics.png)
+
+Focuses on current stock, stock coverage, low-stock exposure, stock health, reorder requirements, category-level inventory levels, and expiry risk.
+
+---
+
+## Suppliers Analytics
+
+![Suppliers Analytics](Screenshots/04_Suppliers_Analytics.png)
+
+Analyzes supplier count, procurement cost, lead time, on-time delivery, reliability, regional supplier performance, and supplier cost versus performance.
+
+---
+
+## Business Insights & Recommendations
+
+![Business Insights & Recommendations](Screenshots/05_Business_Insights_Recommendations.png)
+
+Summarizes the major analytical findings and translates them into practical recommendations for improving healthcare supply chain operations.
+
+---
+
+# 💡 Key Business Insights
+
+The analysis provides visibility across demand, inventory, supplier performance, and facility-level consumption.
+
+### Demand & Sales
+
+- Total sales reached approximately **$3.33M** across **14,218 order records**.
+- Total ordered quantity was approximately **31,731 units**.
+- Average order value was **$234.04**.
+- Demand can be analyzed across departments, categories, medicines, and monthly periods.
+- Order status analysis provides visibility into delivered, returned, cancelled, and pending orders.
+- Return rate across the reporting dataset is approximately **13.08%**.
+
+### Inventory
+
+- Current inventory stands at approximately **224.7K units**.
+- Average stock coverage is approximately **49 days**.
+- The dashboard identifies **27 low-stock items** requiring monitoring.
+- Inventory analysis provides visibility into reorder requirements, stock coverage, category-level stock levels, and expiry risk.
+- Stock health is approximately **97.4%** based on the dashboard's inventory health measure.
+
+### Supplier Performance
+
+- The supplier dataset contains **538 suppliers**.
+- Average supplier lead time is approximately **8.4 days**.
+- Overall on-time delivery performance is **82.13%**.
+- Average supplier reliability score is **4.3 / 5**.
+- Supplier performance can be compared across delivery performance, cost, lead time, reliability, and region.
+- **115 suppliers** meet the defined **90% on-time delivery threshold**, while **423 suppliers** fall below it.
+
+### Facility Consumption
+
+Facility consumption analysis provides an operational view of:
+
+- Medicine consumption
+- Out-of-stock exposure
+- Wastage
+- Bed-day utilization
+- Supply usage
+- Regional consumption patterns
+
+This analysis was completed through the Python data preparation workflow and SQL Server analytical layer. It was intentionally not presented as a separate Power BI page so that the final reporting layer remains focused on the primary management areas of demand, inventory, and supplier performance.
+
+---
+
+# 📌 Strategic Recommendations
+
+Based on the analytical findings, the following business actions can be considered:
+
+- **Optimize Inventory Planning** by monitoring low-stock items, reorder levels, and stock coverage to reduce stock-out exposure.
+- **Strengthen Supplier Performance Management** by evaluating delivery performance together with cost, lead time, and reliability.
+- **Monitor Demand Concentration** across departments, categories, and medicines to support purchasing and inventory allocation decisions.
+- **Reduce Operational Waste** by using facility consumption and wastage analysis to identify opportunities for improved resource utilization.
+- **Review Return Patterns** to identify areas where returned orders may require further operational investigation.
+- **Establish KPI-Based Monitoring** for demand, inventory availability, supplier delivery, and operational performance as part of regular management review.
+
+---
+
+# 🧹 Data Preparation & Quality
+
+The datasets were profiled, cleaned, validated, and standardized before analytical use.
+
+Key data preparation activities included:
+
+- Data profiling
+- Record and field validation
+- Duplicate checks
+- Missing-value assessment
+- Data-type validation
+- Date-field validation
+- Field standardization
+- Business-rule validation
+
+The cleaned datasets form the foundation for the SQL Server analytical layer and Power BI reporting model.
+
+The Demand & Sales dataset contains **633 cancelled-order records without delivery dates**, which is consistent with the order status structure of the dataset.
+
+---
+
+# 📓 Python / Jupyter Analysis
+
+Python and Jupyter Notebooks were used during the initial data preparation and validation stage.
+
+The notebooks cover:
+
+- Dataset profiling
+- Data quality assessment
+- Missing-value analysis
+- Duplicate validation
+- Data cleaning
+- Field standardization
+- Initial validation
+
+The notebooks included in the repository are:
+
+```text
+Notebooks/
+├── 01_Data_Profiling.ipynb
+└── 02_Data_Cleaning.ipynb
+```
+
+Python was primarily used to establish data quality and consistency before the datasets were taken into the SQL Server analytical workflow.
+
+---
+
+# 🗄️ SQL Server Analytical Workflow
+
+SQL Server was used to perform structured validation and business-oriented analysis after data preparation.
+
+The analytical workflow included:
+
+```text
+Cleaned Data
+     │
+     ▼
+SQL Server Tables
+     │
+     ▼
+Data Quality Validation
+     │
+     ▼
+Business Analysis
+     │
+     ├── Demand & Sales
+     ├── Facility Consumption
+     ├── Inventory
+     └── Supplier Procurement
+```
+
+The SQL scripts are organized by analytical area to make the workflow easier to review and reproduce.
+
+---
+
+# 📁 Repository Structure
+
+```text
+Healthcare-Supply-Chain-Inventory-Analytics/
+│
+├── 📂 Dashboard/
+│   └── Healthcare_Supply_Chain_Inventory_Analytics.pbix
+│      • Interactive Power BI dashboard
+│
+├── 📂 Datasets/
+│   └── README.md
+│      • Dataset documentation and data dictionary
+│
+├── 📂 Notebooks/
+│   ├── 01_Data_Profiling.ipynb
+│   └── 02_Data_Cleaning.ipynb
+│      • Data profiling, cleaning, and validation
+│
+├── 📂 SQL Scripts/
+│   ├── 01_Data_Quality_Validation.sql
+│   ├── 02_Demand_Sales_Analysis.sql
+│   ├── 03_Inventory_Analysis.sql
+│   ├── 04_Consumption_Facility_Analysis.sql
+│   └── 05_Supplier_Procurement_Analysis.sql
+│      • SQL-based validation and business analysis
+│
+├── 📂 Screenshots/
+│   ├── 01_Executive_Overview.png
+│   ├── 02_Demand_Analytics.png
+│   ├── 03_Inventory_Analytics.png
+│   ├── 04_Suppliers_Analytics.png
+│   └── 05_Business_Insights_Recommendations.png
+│      • Power BI dashboard preview screenshots
+│
+├── .gitignore
+│
+├── Healthcare_Supply_Chain_Inventory_Analytics.pbix
+│   • Power BI report file
+│
+└── README.md
+   • Project documentation
+```
+
+---
+
+# ▶️ Getting Started
+
+1. Clone this repository.
+2. Open the `.pbix` file using Microsoft Power BI Desktop.
+3. Update the data source paths if required.
+4. Refresh the Power BI data model.
+5. Explore the five dashboard pages.
+6. Review the Python notebooks to understand the data preparation process.
+7. Review the SQL scripts to understand the validation and business analysis performed on the cleaned datasets.
+
+---
+
+# 🔮 Future Enhancements
+
+- Develop demand forecasting models using historical demand patterns.
+- Introduce predictive inventory planning to improve replenishment decisions.
+- Expand supplier risk scoring using cost, lead time, reliability, and delivery performance.
+- Implement automated reporting through Power BI Service.
+- Integrate additional healthcare operational datasets.
+- Develop machine learning models for demand and stock-out prediction.
+- Introduce automated KPI monitoring and alerting.
+
+---
+
+# 👨‍💻 Author
+
+**Vasu Bhardwaj**
+
+**Aspiring Data Analyst | SQL | Power BI | Python | Business Intelligence**
+
+---
+
+# ⭐ Support
+
+If you found this project valuable or learned something from it, please consider giving this repository a **⭐ Star**.
+
+Your support helps increase the visibility of the project and motivates continued development of practical data analytics projects.
+
+---
+
+<div align="center">
+
+### ⭐ If you found this project helpful, consider giving it a Star!
+
+**Built with ❤️ by Vasu Bhardwaj**
+
+</div>
