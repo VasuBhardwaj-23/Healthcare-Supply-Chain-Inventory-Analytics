@@ -287,7 +287,7 @@ The notebooks cover:
 Notebooks/
 ├── 01_Data_Profiling.ipynb
 └── 02_Data_Cleaning.ipynb
-
+```
 
 # 🗄️ SQL Server Analysis
 
