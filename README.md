@@ -120,7 +120,7 @@ The project uses four operational datasets representing major areas of the healt
 
 Detailed dataset documentation, field descriptions, and data-related notes are available in [`Datasets/README.md`](Datasets/README.md).
 
-> **Data Availability:** The repository does not include the source CSV files. Dataset documentation is provided separately to describe the analytical structure and data fields used in the project.
+> **Data Availability:** The repository include the source CSV files. Dataset documentation is provided separately to describe the analytical structure and data fields used in the project.
 
 ---
 
@@ -417,7 +417,6 @@ Healthcare-Supply-Chain-Inventory-Analytics/
 ├── .gitignore
 │
 └── README.md
-   • Project documentation
 ```
 
 ---
