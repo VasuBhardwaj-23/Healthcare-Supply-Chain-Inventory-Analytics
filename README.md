@@ -166,7 +166,7 @@ The following KPIs summarize the major operational areas covered by the final Po
 | Stock Cover | 49 days |
 | Stock Health | 97.4% |
 | Low-Stock Items | 27 |
-| Return Rate | 13.08% |
+| Return Rate | 11.82% |
 | Total Suppliers | 538 |
 | Average Supplier Lead Time | 8.4 days |
 | On-Time Delivery Rate | 82.13% |
@@ -243,7 +243,7 @@ The analysis provides visibility across demand, inventory, supplier performance,
 - Average order value was **$234.04**.
 - Demand can be analyzed across departments, categories, medicines, and monthly periods.
 - Order status analysis provides visibility into delivered, returned, cancelled, and pending orders.
-- The overall return rate across the reporting dataset is approximately **13.08%**.
+- The return rate across the reporting dataset is approximately **11.82%**.
 
 ## Inventory
 
